@@ -1,0 +1,199 @@
+:root{
+    --primary: rgb(29, 221, 189);
+    --bgDark: rgb(12, 12, 12);
+    --white: rgb(250, 250, 250);
+    --secondary: rgb(0, 59, 50);
+    --bgLight: rgb(190, 181, 181);
+    }
+    /* Style the container-fluid */
+.container-fluid {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Style the inner container */
+#landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 87vh;
+    
+}
+
+/* Style the image */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style the name */
+.name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Style the developer text */
+.name span {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Style the Download CV button */
+.btn-secondary {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #0056b3;
+    color: red;
+}
+
+/* Add some spacing between elements */
+.m-5 {
+    margin: 5px;
+}
+
+.col-5 {
+    flex: 1;
+}
+/* Style the about section */
+section.about {
+    padding: 6rem;
+    background-color: #f9f9f9; 
+    
+}
+
+/* Style the heading */
+section.about .heading h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333; 
+    padding-top: 20%;
+}
+
+section.about .heading span {
+    color: #007bff;
+    
+}
+
+/* Style the content */
+div.content {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    line-height: 1.9rem;
+    margin-bottom: 2rem;
+    padding-top: 1%;
+}
+
+/* Style the "Read more" button */
+div.button button {
+    background-color: #007bff; 
+    color: #fff; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+div.button button:hover {
+    background-color: #0056b3; 
+}
+
+/* Style the image */
+div.col-5 img.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 40px;
+}
+
+/* Add spacing between elements */
+div.m-5 {
+    margin: 5px;
+}
+
+/* Experience */
+.vertical-line {
+    position: absolute;
+    width: 4px;
+    background-color: #71ea66;
+    height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+/* projects section */
+/* Style the project cards container */
+#projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Style the individual project cards */
+.card {
+    width: 18rem;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Enlarge the card on hover */
+}
+
+/* Style the card images */
+.card-img-top {
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 10px 10px 0 0;
+    margin-top: 5%;
+}
+
+/* Style the card titles */
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Style the card text */
+.card-text {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Style the "Go Github" buttons */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
