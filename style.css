@@ -1,20 +1,211 @@
 :root{
-    --primary: rgb(29, 221, 189);
+    --primary:#c7d4e3;
     --bgDark: rgb(12, 12, 12);
     --white: rgb(250, 250, 250);
     --secondary: rgb(0, 59, 50);
-    --bgLight: rgb(190, 181, 181);
+    --bgLight: rgba(209, 211, 179, 0.56);
+    
     }
+    *,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.jobs{
+    --color: rgba(30, 30, 30);
+    --bgColor: rgba(245, 245, 245);
+    height: 100vh;
+    display: grid;
+    align-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    font-family: "Poppins", sans-serif;
+    color: var(--color);
+    background: rgb(211, 208, 227);
+  }
+h1 {
+    text-align: center;
+  }
+  
+  ul {
+    --col-gap: 2rem;
+    --row-gap: 2rem;
+    --line-w: 0.25rem;
+    display: grid;
+    grid-template-columns: var(--line-w) 1fr;
+    grid-auto-columns: max-content;
+    column-gap: var(--col-gap);
+    list-style: none;
+    width: min(60rem, 90%);
+    margin-inline: auto;
+  }
+  
+  /* line */
+  ul::before {
+    content: "";
+    grid-column: 1;
+    grid-row: 1 / span 20;
+    background: rgb(225, 225, 225);
+    border-radius: calc(var(--line-w) / 2);
+  }
+  
+  /* columns*/
+  
+  /* row gaps */
+  ul li:not(:last-child) {
+    margin-bottom: var(--row-gap);
+  }
+  
+  /* card */
+  ul li {
+    grid-column: 2;
+    --inlineP: 1.5rem;
+    margin-inline: var(--inlineP);
+    grid-row: span 2;
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+  }
+  
+  /* date */
+  ul li .date {
+    --dateH: 3rem;
+    height: var(--dateH);
+    margin-inline: calc(var(--inlineP) * -1);
+  
+    text-align: center;
+    background-color: var(--accent-color);
+  
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+  
+    display: grid;
+    place-content: center;
+    position: relative;
+  
+    border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+  }
+  
+  /* date flap */
+  ul li .date::before {
+    content: "";
+    width: var(--inlineP);
+    aspect-ratio: 1;
+    background: var(--accent-color);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
+    position: absolute;
+    top: 100%;
+  
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    right: 0;
+  }
+  
+  /* circle */
+  ul li .date::after {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    aspect-ratio: 1;
+    background: var(--bgColor);
+    border: 0.3rem solid var(--accent-color);
+    border-radius: 50%;
+    top: 50%;
+  
+    transform: translate(50%, -50%);
+    right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+  
+  /* title descr */
+  ul li .title,
+  ul li .descr {
+    background: var(--bgColor);
+    position: relative;
+    padding-inline: 1.5rem;
+  }
+  ul li .title {
+    overflow: hidden;
+    padding-block-start: 1.5rem;
+    padding-block-end: 1rem;
+    font-weight: 500;
+  }
+  ul li .descr {
+    padding-block-end: 1.5rem;
+    font-weight: 300;
+  }
+  
+  /* shadows */
+  ul li .title::before,
+  ul li .descr::before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 0.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    left: 50%;
+    border-radius: 50%;
+    filter: blur(4px);
+    transform: translate(-50%, 50%);
+  }
+  ul li .title::before {
+    bottom: calc(100% + 0.125rem);
+  }
+  
+  ul li .descr::before {
+    z-index: -1;
+    bottom: 0.25rem;
+  }
+  
+  @media (min-width: 40rem) {
+    ul {
+      grid-template-columns: 1fr var(--line-w) 1fr;
+    }
+    ul::before {
+      grid-column: 2;
+    }
+    ul li:nth-child(odd) {
+      grid-column: 1;
+    }
+    ul li:nth-child(even) {
+      grid-column: 3;
+    }
+  
+    /* start second card */
+    ul li:nth-child(2) {
+      grid-row: 2/4;
+    }
+  
+    ul li:nth-child(odd) .date::before {
+      clip-path: polygon(0 0, 100% 0, 100% 100%);
+      left: 0;
+    }
+  
+    ul li:nth-child(odd) .date::after {
+      transform: translate(-50%, -50%);
+      left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+    }
+    ul li:nth-child(odd) .date {
+      border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+    }
+  }
+  
+  .credits {
+    margin-top: 1rem;
+    text-align: right;
+  }
+  .credits a {
+    color: var(--color);
+  }
 
-    *{
+    /* *{
         font-family: Poppins;
-    }
+    } */
 
     /* Style the navbar */
 .navbar {
     background-color: #e8ebef; 
     padding: 10px 0;
-    position: fixed;
     top: 0;
     z-index: 1000; 
 }
@@ -60,9 +251,9 @@
     background-color: #0056b3;
 }
 
-    /* Style the container-fluid */
+    /* home content */
 .container-fluid {
-    background-color: #f0f0f0;
+    background-color:var(--primary);
     padding: 20px;
 }
 
@@ -76,16 +267,12 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     height: 87vh;
-    
 }
 
-/* Style the image */
 .img-fluid {
     max-width: 100%;
     height: auto;
 }
-
-/* Style the name */
 .name {
     font-size: 24px;
     font-weight: bold;
@@ -95,12 +282,10 @@
 }
 
 /* Style the developer text */
-/* .name span {
-    color: #007bff;
+.name span {
+    color: rgb(29, 221, 189);
     font-weight: bold;
-} */
-
-/* Style the Download CV button */
+} 
 .btn-secondary {
     background-color: #007bff;
     color: #ffffff;
@@ -117,42 +302,14 @@
     background-color: #0056b3;
     color: red;
 }
-#home-content{
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-
-}
-
 .company{
-    color: #71ea66;
+    color: #2bf619;
     font-size: 1.5rem;
-}
-.career{
-    font-size: 1.5rem;
-}
-.name h4 span{
-    color:red;
-}
- 
-
-
-/* Add some spacing between elements */
-.m-5 {
-    margin: 5px;
-}
-.col-lg-5{
-    flex: 1;
-
-}
-
-.col-5 {
-    flex: 1;
 }
 /* Style the about section */
 section.about {
     padding: 1rem;
-    background-color: #f9f9f9; 
+    background-color:var(--bgLight); 
     
 }
 
@@ -207,15 +364,14 @@ div.m-5 {
 }
 
 /* Experience */
-.vertical-line {
+/* .vertical-line {
     position: absolute;
     width: 4px;
     background-color: #71ea66;
     height: 100vh;
     left: 50%;
     transform: translateX(-50%);
-}
-
+} */
 
 
 
@@ -371,3 +527,14 @@ div.m-5 {
     bottom: 0;
 }
 
+/* Media Queries */
+@media screen and (min-width:425px){
+    .container-fluid{
+        #landing{
+            #img1{
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+}

@@ -27,7 +27,7 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light ">
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top ">
     <div class="container">
       <a class="navbar-brand" href="#landing"><img src="./images/logo.png" width="50px" alt="logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -61,12 +61,12 @@
 
   <div class="container-fluid hero flex items-centre justify-between">
     <div class="container d-md-flex" id="landing">
-      <div class="m-5 col-lg-5 col-md-6"><img src="images/mee.png" class="img-fluid" />
+      <div class="m-5 col-lg-5 col-md-6"><img src="images/mee.png" class="img-fluid" id="img" />
       </div>
 
       <div class="m-5 col-lg-5 col-md-6" id="home-content">
         <div class="name flex-1">
-          <h4>Hello, I'm <span>Zizile Ngcem</span></h4>
+          <h4><span>Zizile Ngcem</span></h4>
         </div>
         <div class="career">A web <span>developer </span>at</div>
         <div class="company"> Younglings</div>
@@ -102,53 +102,42 @@
 
     <!-- Experience -->
 
-    <div class="container" id="experience">
-      <div class="vertical-line"></div>
-      <div class="row">
-
-        <div class="col-md-4 card cardleft" data-aos="fade-right" data-aos-duration="1200">
-          <h3>Systems developer: 2020-2021</h3>
-          <ul>
-            <li>Gathering requirements</li>
-            <li>Providing maintenance and support</li>
-            <li>Troubleshooting and issue resolution</li>
-            <li>Engaging in programming and coding</li>
-            <li>Documenting processes and information</li>
-          </ul>
-          <div class="image-container">
-            <!-- Add your image here -->
-          </div>
-        </div>
-
-        <div class="col-md-4 card cardmiddle" data-aos="fade-left" data-aos-duration="1300" data-aos-delay="50">
-          <h3>Technical support: 2018-2020</h3>
-          <ul>
-            <li>Performing installation, setup, and maintenance tasks</li>
-            <li>Acting as the initial contact for IT support within the organization</li>
-            <li>Engaging in troubleshooting and creative problem-solving</li>
-            <li>Identifying and resolving software and hardware issues</li>
-          </ul>
-          <div class="image-container">
-            <!-- Add your image here -->
-          </div>
-        </div>
-
-        <!-- App Development -->
-        <div class="col-md-4 card cardright" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="100">
-          <h3>App Development</h3>
-          <ul>
-            <li>Conduct remote troubleshooting using diagnostic methods</li>
-            <li>Offer precise details regarding IT products or services</li>
-            <li>Escalate unresolved issues to higher-level support personnel</li>
-            <li>Assist users in addressing challenges related to computer and network problems</li>
-          </ul>
-          <div class="image-container">
-            <!-- Add your image here -->
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <div class="jobs">
+    <ul>
+        <li style="--accent-color:#FBCA3E">
+            <div class="date">2020-2021</div>
+            <div class="title">Systems developer - Altron</div>
+            <div class="descr">
+              -Gathering requirements<br>
+              -Providing maintenance and support<br>
+              -Troubleshooting and issue resolution<br>
+              -Engaging in programming and coding<br>
+              -Documenting processes and information
+              
+            </div>
+        </li>
+        <li style="--accent-color:#E24A68">
+            <div class="date">2018-2020</div>
+            <div class="title">Technical Support - Game head office</div>
+            <div class="descr">
+             -Performing installation, setup, and maintenance tasks<br>
+            -Acting as the initial contact for IT support within the organization<br>
+            -Engaging in troubleshooting and creative problem-solving<br>
+            -Identifying and resolving software and hardware issues<br>
+            </div>
+        </li>
+        <li style="--accent-color:#1B5F8C">
+            <div class="date">2017-2018</div>
+            <div class="title">Help desk - Umzimkulu Municipality</div>
+            <div class="descr">
+              Conduct remote troubleshooting using diagnostic methods<br>
+              Offer precise details regarding IT products or services<br>
+              Escalate unresolved issues to higher-level support personnel<br>
+              Assist users in addressing challenges related to computer and network
+            </div>
+        </li> 
+    </ul>
+  </div>
 
 
     <!-- Projects -->
@@ -222,6 +211,7 @@
                   <label for="your-message" class="form-label">Your Message</label>
                   <textarea class="form-control" id="your-message" name="your-message" rows="5" required></textarea>
                 </div>
+                <div class="g-recaptcha" data-sitekey="6LflSCkoAAAAAITUipkPYba2EJ5zYEv_sjAh42wr"></div>
                 <div class=" text-center"><button>Submit</button></div>
               </div>
           </div>
