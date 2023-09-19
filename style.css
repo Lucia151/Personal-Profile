@@ -247,26 +247,29 @@
 /* .career{
 padding-left: 100px;
 } */
-.labtn{
-    background-color: #3cd8e1;
+#labtn{
+    /* background-color: #3cd8e1;
     color: #ffffff;
     padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 5px; */
+    /* cursor: pointer; */
     text-transform: uppercase;
     transition: all .3s ease;
-    margin-top: 50px;
+    margin-top: 30px;
+    
 }
 
-.labtn:hover {
+/* .labtn:hover {
     background-color: #0056b3;
     color: red;
-}
+} */
 
 /* Style the about section */
 section.about {
     padding: 1rem;
-    background-color:var(--bgLight); 
+    background-color:var(--bgLight);
+   
+    
     
 }
 
@@ -319,6 +322,40 @@ div.col-lg-5 img.img-fluid {
 div.m-5 {
     margin: 5px;
 }
+
+/*   slide in read more*/
+#insideAbout{
+  z-index: 10;
+  background-color: yellow;
+  
+}
+
+
+#clearfix{
+  z-index: 20;
+  background-color: #2bf619;
+  position: relative;
+   /* Place it at the vertical center */
+  
+}
+.clearfix{
+  visibility: hidden;
+  transition: .45s;
+  left: 50%; /* Place it at the horizontal center */
+  transform: translate(-10%, -200%);
+}
+.clearfix.active{
+  transition: .45s;
+  visibility: visible;
+  left: 50%; /* Place it at the horizontal center */
+  transform: translate(-50%, -200%);
+}
+
+
+
+
+
+
 
 /* Experience */
 /* .vertical-line {
