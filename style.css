@@ -6,6 +6,156 @@
     --bgLight: rgba(209, 211, 179, 0.56);
     
     }
+    
+    
+   /********************************************************HOME CONTENT*********************************************/
+.container-fluid {
+  background-color:var(--primary);
+  padding: 20px;
+}
+#landing {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  height: 87vh;
+}
+
+.name h4{
+  font-size: 2.5rem;
+  /* padding-top: 60px; */
+}
+
+
+.name span {
+  color: rgb(29, 221, 189);
+  font-weight: bold;
+  /* padding-left: 80px; */
+
+} 
+.company{
+  color: #2bf619;
+  font-size: 1.5rem;
+  font-family: 'Croissant One', cursive;
+
+}
+#home-content{
+padding-top: 4rem;
+}
+
+/* .career{
+padding-left: 100px;
+} */
+#labtn{
+  /* background-color: #3cd8e1;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px; */
+  /* cursor: pointer; */
+  text-transform: uppercase;
+  transition: all .3s ease;
+  margin-top: 30px;
+  
+}
+
+/* .labtn:hover {
+  background-color: #0056b3;
+  color: red;
+} */
+
+     
+    
+/*****************************************************ABOUT CONTENT***************************************************/
+
+section.about {
+  padding: 1rem;
+  background-color:var(--bgLight);  
+}
+
+/* Style the heading */
+section.about .heading h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333; 
+  padding-top: 20%;
+}
+
+section.about .heading span {
+  color: #007bff;
+  
+}
+
+/* Style the content */
+div.content {
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  line-height: 1.9rem;
+  margin-bottom: 2rem;
+  padding-top: 1%;
+}
+
+/* Style the "Read more" button */
+div.button button {
+  background-color: #007bff; 
+  color: #fff; 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+}
+
+div.button button:hover {
+  background-color: #0056b3; 
+}
+
+/* Style the image */
+div.col-lg-5 img.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 40px;
+}
+
+/* Add spacing between elements */
+div.m-5 {
+  margin: 5px;
+}
+
+/*   slide in read more*/
+/* #insideAbout{
+z-index: 10;
+background-color: yellow;
+
+}
+
+
+#clearfix{
+z-index: 20;
+background-color: #2bf619;
+position: relative;
+ /* Place it at the vertical center */
+
+/* }
+.clearfix{
+visibility: hidden;
+transition: .45s;
+left: 50%; 
+transform: translate(-10%, -200%);
+}
+.clearfix.active{
+transition: .45s;
+visibility: visible;
+left: 50%; 
+transform: translate(-50%, -200%);
+} */
+
+
+/****************************************************EXPERIENCE PAGE***********************************************/
+
     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
     *,
@@ -26,7 +176,7 @@
       padding: 2rem;
       font-family: "Poppins", sans-serif;
       color: var(--color);
-      background: rgb(211, 208, 227)
+      background: rgba(141, 150, 154, 0.795)
     }
    
     
@@ -199,178 +349,8 @@
     .credits a {
       color: var(--color);
     }
-    
 
-    /* *{
-        font-family: Poppins;
-    } */
-
-
-   /********************************************************HOME CONTENT*********************************************/
-.container-fluid {
-    background-color:var(--primary);
-    padding: 20px;
-}
-#landing {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    height: 87vh;
-}
-
-.name h4{
-    font-size: 2.5rem;
-    /* padding-top: 60px; */
-}
-
-/* Style the developer text */
-.name span {
-    color: rgb(29, 221, 189);
-    font-weight: bold;
-    /* padding-left: 80px; */
-
-} 
-.company{
-    color: #2bf619;
-    font-size: 1.5rem;
-    font-family: 'Croissant One', cursive;
-  
-}
-#home-content{
-  padding-top: 4rem;
-}
-
-/* .career{
-padding-left: 100px;
-} */
-#labtn{
-    /* background-color: #3cd8e1;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 5px; */
-    /* cursor: pointer; */
-    text-transform: uppercase;
-    transition: all .3s ease;
-    margin-top: 30px;
-    
-}
-
-/* .labtn:hover {
-    background-color: #0056b3;
-    color: red;
-} */
-
-/* Style the about section */
-section.about {
-    padding: 1rem;
-    background-color:var(--bgLight);
-   
-    
-    
-}
-
-/* Style the heading */
-section.about .heading h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #333; 
-    padding-top: 20%;
-}
-
-section.about .heading span {
-    color: #007bff;
-    
-}
-
-/* Style the content */
-div.content {
-    font-family: 'Lato', sans-serif;
-    color: #333;
-    line-height: 1.9rem;
-    margin-bottom: 2rem;
-    padding-top: 1%;
-}
-
-/* Style the "Read more" button */
-div.button button {
-    background-color: #007bff; 
-    color: #fff; 
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    
-}
-
-div.button button:hover {
-    background-color: #0056b3; 
-}
-
-/* Style the image */
-div.col-lg-5 img.img-fluid {
-    max-width: 100%;
-    height: auto;
-    border-radius: 40px;
-}
-
-/* Add spacing between elements */
-div.m-5 {
-    margin: 5px;
-}
-
-/*   slide in read more*/
-#insideAbout{
-  z-index: 10;
-  background-color: yellow;
-  
-}
-
-
-#clearfix{
-  z-index: 20;
-  background-color: #2bf619;
-  position: relative;
-   /* Place it at the vertical center */
-  
-}
-.clearfix{
-  visibility: hidden;
-  transition: .45s;
-  left: 50%; /* Place it at the horizontal center */
-  transform: translate(-10%, -200%);
-}
-.clearfix.active{
-  transition: .45s;
-  visibility: visible;
-  left: 50%; /* Place it at the horizontal center */
-  transform: translate(-50%, -200%);
-}
-
-
-
-
-
-
-
-/* Experience */
-/* .vertical-line {
-    position: absolute;
-    width: 4px;
-    background-color: #71ea66;
-    height: 100vh;
-    left: 50%;
-    transform: translateX(-50%);
-} */
-
-
-
-
-/* projects section */
+/***************************************************************** projects section *************************************************************/
 /* Style the project cards container */
 #projects {
     display: flex;
@@ -378,7 +358,7 @@ div.m-5 {
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
-    background-color:var(--secondary);
+    
 }
 
 /* Style the individual project cards */
@@ -392,7 +372,7 @@ div.m-5 {
 }
 
 .card:hover {
-    transform: scale(1.05); /* Enlarge the card on hover */
+    transform: scale(1.05); 
 }
 
 /* Style the card images */
@@ -431,26 +411,8 @@ div.m-5 {
 }
 
 
-/* Media Queries */
-/* @media screen and (min-width:425px){
-    .container-fluid{
-        #landing{
-            #img1{
-                width: 200px;
-                height: 200px;
-            }
-        }
-    }
-} */
 
-
-/* Style the contact section container */
-/* #contact {
-    
-    padding: 6rem ;
-} */
-
-/* Style the contact form on the right */
+/************************************************* CONTACT CONTENT*************************************************/
 #contact .col-10  {
     padding: 20px; 
     background-color: var(--bgLight);
@@ -477,7 +439,7 @@ div.m-5 {
     margin-right: 10px;
     vertical-align: middle;
 }
-/* Style the footer */
+/****************************************************************** FOOTER CONTENT************************************************ */
 .footer {
     background-color: #f9f9f9;
     padding: 20px 0;
