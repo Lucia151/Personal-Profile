@@ -4,6 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Lato&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <!--css file  -->
   <link rel="stylesheet" href="style.css">
   <!-- jquery Script -->
@@ -22,13 +32,31 @@ emailjs.init("p1FuJnORu39zlUWvK");
 })();
 </script>
 <script src="index.js"></script>
+<style>
+  /* Add a CSS animation for the container */
+  .container-fluid.fade-in {
+    opacity: 0; /* Initially, set the opacity to 0 */
+    animation: fadeInAnimation 3s ease-in-out forwards; /* Define the animation */
+  }
+
+  /* Define the keyframes for the fade-in animation */
+  @keyframes fadeInAnimation {
+    from {
+      opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+      opacity: 1; /* End with opacity 1 */
+    }
+  }
+</style>
+
 </head>
 
-<body>
+<body >
 <!------------------------------NAVBAR-------------------- -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top ">
   <div class="container">
-    <a class="navbar-brand" href="#landing"><img src="./images/logo.png" width="70px" alt="logo"></a>
+    <a class="navbar-brand" href="#landing"><img src="./images/logo.png" width="5fire0px" alt="logo"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -38,13 +66,13 @@ emailjs.init("p1FuJnORu39zlUWvK");
           <a class="nav-link active" aria-current="page" href="#AboutMe">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link active" href="#experience">Experience</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link active" href="#projects">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link active" href="#contact">Contact</a>
         </li>
       </ul>
      
@@ -54,9 +82,9 @@ emailjs.init("p1FuJnORu39zlUWvK");
 
   <!------------------------------HOME CONTENT-------------------- -->
 
-  <div class="container-fluid hero flex items-centre justify-between">
-    <div class="container d-md-flex" id="landing">
-      <div class="mx-5 col-lg-5 col-md-6"><img src="images/mee.png" class="img-fluid" id="img" />
+  <div class="container-fluid  flex items-centre justify-between fade-in"  style="background-color: #91C8E4">
+    <div class="container d-md-flex" id="landing"  style="color: #333;">
+      <div class="mx-5 col-lg-5 col-md-6 "><img src="images/mee.png" class="img-fluid" id="img" />
       </div>
 
       <div class="mx-5 col-lg-5 col-md-6" id="home-content">
@@ -66,31 +94,36 @@ emailjs.init("p1FuJnORu39zlUWvK");
         <div class="career">A web <span>developer </span>at</div>
         <div class="company"> Younglings</div>
         <div class="d-flex" id="labtn">
-          <a href="images/Zizile Ngcem - Resume.pdf" target="_blank" ><button class="btn btn-outline-success" type="submit">DOWNLOAD CV</button></a>
+          <a href="images/Zizile Ngcem - Resume.pdf" target="_blank" ><button class="btn btn-outline-success" type="submit" >DOWNLOAD CV</button></a>
         </div>
       </div>
     </div>
   </div>
-  <div>
+  
 
     <!------------------------------ABOUT CONTENT-------------------- -->
-    <section class="about" id="AboutMe">
-      <div class="d-md-flex" id="insideAbout">
+    <section class="about" style="background-color: #9cbae4" >
+      <div class="d-md-flex" id="AboutMe">
         <div class="m-5 col-lg-5 col-md-8">
           <div class="heading">
             <h1>About <span>Me</span></h1>
           </div>
           <div class="content">
             <p>
-              My name is Zizile Ngcem, and I'm a young and motivated software developer intern with a strong desire to
-              transform innovative ideas into tangible digital solutions.
+              My name is Zizile Ngcem, and I'm a young and motivated software developer intern with a strong desire to transform innovative ideas into tangible digital solutions. 
+        As a junior software developer with a diverse background spanning technical support, help desk, and systems development, I bring a unique blend of skills and experiences to the table. 
+        My dedication to continuous growth and pursuit of excellence has driven me to excel in various aspects of the tech industry.
             </p>
           </div>
-          <div class="button">
-            <a href="readMore.html" target="_blank" ><button id="aboutButton">Read more</button></a>
-          </div>
+          <!-- <div class="button">
+            <a href="readMore.html" ><button id="aboutButton">Read more</button></a>
+          </div> -->
+          <a href="https://github.com/Lucia151">
+            <img src="images/github.png" alt="..."></a>
+            <a href ="www.linkedin.com/in/zizile-ngcem-6764b6233">
+            <img src="images/linkedin.png" alt="..."></a>
         </div>
-        <div class="m-5  col-lg-5 col-md-8" >
+        <div class="m-5  col-lg-5 col-md-8 homeImg" >
           <img src="images/Home.png" class="img-fluid" alt="Image of Me">
         </div>
       </div>
@@ -129,10 +162,10 @@ emailjs.init("p1FuJnORu39zlUWvK");
             <div class="date">2017-2018</div>
             <div class="title">Help desk - Umzimkulu Municipality</div>
             <div class="descr">
-              Conduct remote troubleshooting using diagnostic methods<br>
-              Offer precise details regarding IT products or services<br>
-              Escalate unresolved issues to higher-level support personnel<br>
-              Assist users in addressing challenges related to computer and network
+              -Conduct remote troubleshooting using diagnostic methods<br>
+              -Offer precise details regarding IT products or services<br>
+              -Escalate unresolved issues to higher-level support personnel<br>
+              -Assist users in addressing challenges related to computer and network
             </div>
         </li> 
     </ul>
@@ -141,7 +174,7 @@ emailjs.init("p1FuJnORu39zlUWvK");
 
    <!------------------------------PROJECT CONTENT-------------------- -->
 
-    <div class="d-md-flex justify-content-evenly" id="projects" style="background-color: rgba(137, 186, 214, 0.568); height: 100%;">
+    <div class="d-md-flex justify-content-evenly pro" id="projects" id="projects" style="background-color: #D3E3F4; height: 100%;">
       <div class="card my-4" style="width: 18rem;">
         <img src="images/R.png" class="card-img-top" alt="...">
         <div class="card-body">
@@ -170,8 +203,7 @@ emailjs.init("p1FuJnORu39zlUWvK");
         <div class="card-body">
           <h5 class="card-title">Financial calculator</h5>
           <p class="card-text">
-            Had to develop a versatile financial calculator, that enables individuals to calculate both the interest
-            they will earn from an investment and the amount they will need to pay home loan.
+            Created a versatile financial calculator for calculating both investment interest and home loan payments.
           </p>
           <a href="https://github.com/Lucia151" class="btn btn-primary">Go Github</a>
         </div>
@@ -180,51 +212,38 @@ emailjs.init("p1FuJnORu39zlUWvK");
     
 
    <!------------------------------CONTACT CONTENT-------------------- -->
-    <div class="div" style="background-color: rgba(6, 126, 196, 0.568); height: 100%;">
-    <div class="container" id="contact"  >
-      <h1 class="text-center">Get in touch</h1>
-      <div class="d-md-flex">
-        <div class="m-5 col-4">
-          <div class="m-4 ">
-            <div class=" d-flex m-2 " ><a href="https://maps.app.goo.gl/rgCy4esuZa6AhwTW6" target="_blank" ><img src="images/location.png" /></a> </div>
-            <div class=" d-flex m-2"><a href="https://www.linkedin.com/in/zizile-ngcem-6764b6233/" target="_blank" ><img src="images/linkedin.png" /> </a></div>
-            <div class=" d-flex m-2"><a href="https://github.com/Lucia151" target="_blank" ><img src="images/github.png" /> </a></div>
+    <div class="wholePage" style="background-color:#F5FCCD;">
+   <div class="container" id="contact" >
+    <h1 class="text-center move">Get in <span>Touch</span></h1>
+    <div class="d-md-flex">
+      <div class="m-5 col-12 col-md-5 mx-auto">
+        <form class="form1">
+          <div class="m-2">
+            <div class="details">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="details">
+              <label for="your-email" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="your-email" name="your-email" required>
+            </div>
+            
+          <div class="m-2">
+            <label for="your-message" class="form-label">Your Message</label>
+            <textarea class="form-control" id="your-message" name="your-message" rows="5" required></textarea>
           </div>
-        </div>
-
-        <div class="m-5 col-10 col-md-5">
-          <div>
-
-            <form class="form1">
-              <div class=" form2">
-                <div class="m-4 ">
-                  <div class="details">
-                    <label for="name" class="form-label">Your Name</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
-                  </div>
-
-                  <div class="details">
-                    <label for="your-email" class="form-label">Your Email</label>
-                    <input type="email" class="form-control" id="your-email" name="your-email" required>
-                  </div>
-                </div>
-                <div class=" m-4 ">
-                  <label for="your-message" class="form-label">Your Message</label>
-                  <textarea class="form-control" id="your-message" name="your-message" rows="5" required></textarea>
-                </div>
-                <div class="g-recaptcha" data-sitekey="6Ld0SCkoAAAAAFlU2Imow5ZObzIPD-GKGAQ6qbGF"></div>
-                <div class=" text-center"><button class="btn1" onclick="sendEmail()">Submit</button></div>
-              </div>
+          <div class="g-recaptcha" data-sitekey="6Ld0SCkoAAAAAFlU2Imow5ZObzIPD-GKGAQ6qbGF"></div>
+          <div class="text-center"><button class="btn1" onclick="sendEmail()">Submit</button></div>
           </div>
-          </form>
-        </div>
+        </form>
       </div>
     </div>
   </div>
 </div>
+  
 
 <!------------------------------FOOTER CONTENT-------------------- -->
-  <footer class="footer mt-auto py-3 bg-light" >
+  <footer class="footer mt-auto py-3 bg-dark" >
     <div class="container">
       <a href="https://github.com/Lucia151">
       <img src="images/github.png" alt="..."></a>
@@ -255,6 +274,44 @@ $(document).ready(function() {
 //         $("#clearfix").toggleClass("active");
 //     });
 // });
+
+
+
+// *******************************SEND BUTTON*******************
+function sendEmail(){
+    var params={
+        name: document.getElementById("name").value ,
+        email: document.getElementById("your-email").value ,
+        postMessage: document.getElementById("your-message").value ,
+    };
+    const serviceID ="service_s3zuiui";
+const templateID = "template_hq73m4m";
+
+emailjs.send(serviceID,templateID,params)
+.then(
+    res =>{
+        document.getElementById("name").value="";
+        document.getElementById("your-email").value="";
+        document.getElementById("your-message").value="";
+        console.log(res);
+        // alert("Message successfully sent")
+    }
+)
+.catch(err=>console.log(err));
+}
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const navbarLinks = document.querySelectorAll(".navbar-nav .nav-link");
+//   console.log(navbarLinks)
+//   navbarLinks.forEach(function (link) {
+//     if (window.location.href.includes(link.getAttribute("href"))) {
+//       link.classList.add("active");
+//     }
+//   });
+// });
+
+
 </script>
 
 <!-- Include Bootstrap JavaScript -->

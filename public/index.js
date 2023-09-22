@@ -18,8 +18,38 @@ emailjs.send(serviceID,templateID,params)
         document.getElementById("your-email").value="";
         document.getElementById("your-message").value="";
         console.log(res);
-        alert("Message successfully sent")
+        // alert("Message successfully sent")
     }
 )
 .catch(err=>console.log(err));
 }
+
+
+
+  function setActiveLink() {
+    
+    var navLinks = document.querySelectorAll('.nav-link');
+
+
+    navLinks.forEach(function (link) {
+      var sectionId = link.getAttribute('href').substring(1);
+      var section = document.getElementById(sectionId);
+
+      
+      if (
+        section &&
+        section.getBoundingClientRect().top <= 50 &&
+        section.getBoundingClientRect().bottom >= 50
+      ) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', setActiveLink);
+
+  window.addEventListener('load', setActiveLink);
+
+
